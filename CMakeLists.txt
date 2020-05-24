@@ -57,8 +57,8 @@ add_custom_target(lint
 )
 
 #global variable
-set(THIRD_PARTY_INCLUDE "/home/licode-erizo/third_party/libdeps/build/include/")
-set(THIRD_PARTY_LIB "/home/licode-erizo/third_party/libdeps/build/lib/")
+set(THIRD_PARTY_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/libdeps/build/include/")
+set(THIRD_PARTY_LIB "${CMAKE_CURRENT_SOURCE_DIR}/third_party/libdeps/build/lib/")
 
 ## Depencencies
 

@@ -171,11 +171,11 @@ install_mediadeps_nogpl(){
 install_libsrtp(){
   if [ -d $LIB_DIR ]; then
     cd $LIB_DIR
-	if [ ! -f ./v11.9.tar.gz ]; then
-    	curl -o libsrtp-2.1.0.tar.gz https://codeload.github.com/cisco/libsrtp/tar.gz/v2.1.0
+	if [ ! -f ./libsrtp-2.1.0.tar.gz ]; then
+    	curl -o -L https://codeload.github.com/cisco/libsrtp/tar.gz/v2.1.0
 	fi
 	
-	if [ ! -f ./v11.9.tar.gz ]; then
+	if [ ! -f ./libsrtp-2.1.0 ]; then
     	tar -zxvf libsrtp-2.1.0.tar.gz
     	cd libsrtp-2.1.0
     	CFLAGS="-fPIC" ./configure --enable-openssl --prefix=$PREFIX_DIR --with-openssl-dir=$PREFIX_DIR
